@@ -7,5 +7,6 @@ target 'NewspaperDemoApp' do
 
   # Pods for NewspaperDemoApp
   pod 'SwiftLint'
+  pod 'SDWebImage', '~> 5.15'
   
 end
