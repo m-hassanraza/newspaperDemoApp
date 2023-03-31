@@ -12,10 +12,26 @@ class NewsDasboardVC: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var newsCollectionView: UICollectionView!
     
+    // MARK: - View Model
+    lazy var viewModel: NewsViewModel = .init()
+    
+    var newsCellModel: [NewsCellModel]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.newsCollectionView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "NY Times Most Popular"
         self.setupCollectionView()
+        CustomHud.sharedInstance.show()
+        viewModel.getTopStories {[weak self] cellModel in
+            self?.newsCellModel = cellModel
+            CustomHud.sharedInstance.hide()
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -38,21 +54,29 @@ class NewsDasboardVC: UIViewController {
         let nib = UINib(nibName: "NewsCell", bundle: nil)
         self.newsCollectionView.register(nib, forCellWithReuseIdentifier: "NewsCell")
     }
-    
 }
 
+// MARK: - News Collection View Delegate
 extension NewsDasboardVC: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let newsDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "NewsDetailsVC") as? NewsDetailsVC,
+              let newsCellModel = newsCellModel
+        else { return }
+        newsDetailsVC.model = newsCellModel[indexPath.item]
+        
+        self.navigationController?.pushViewController(newsDetailsVC, animated: true)
+    }
 }
 
+// MARK: - News Collection View Data Source
 extension NewsDasboardVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        8
+        newsCellModel?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as? NewsCell else {return UICollectionViewCell()}
-        print("Working")
+        cell.configure(model: newsCellModel?[indexPath.item])
         return cell
     }
 
@@ -62,6 +86,7 @@ extension NewsDasboardVC: UICollectionViewDataSource {
     
 }
 
+// MARK: - News Collection View Layout
 extension NewsDasboardVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.newsCollectionView.frame.width - 20

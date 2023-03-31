@@ -54,9 +54,80 @@
                     <view key="view" contentMode="scaleToFill" id="GeP-Oi-GbP">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xvo-Ue-iEW">
+                                <rect key="frame" x="10" y="328.33333333333331" width="370" height="187.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zir-Dj-0v7">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="42.666666666666664"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Stolen Valor: The U.S. Volunteers in Ukraine Who Lie, Waste and Bicker">
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaA-rL-OVH">
+                                        <rect key="frame" x="0.0" y="52.666666666666693" width="352.33333333333331" height="76.666666666666686"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">People who would not be allowed anywhere near the battlefield in a U.S.-led war are active on the Ukrainian front, with ready access to American weapons.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Hannah Seo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxf-jv-kPF">
+                                        <rect key="frame" x="0.0" y="139.33333333333337" width="104.66666666666667" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pa0-f2-2Us">
+                                        <rect key="frame" x="0.0" y="167.33333333333337" width="370" height="20.333333333333343"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="calendar.badge.clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FA2-i5-9ha">
+                                                <rect key="frame" x="0.0" y="1.6666666666666661" width="22.333333333333332" height="19"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-11-01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn7-ge-fTb">
+                                                <rect key="frame" x="31" y="0.0" width="339" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pa0-f2-2Us" secondAttribute="trailing" id="Z4U-VK-oEP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Md5-ZL-dWq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xvo-Ue-iEW" firstAttribute="centerY" secondItem="GeP-Oi-GbP" secondAttribute="centerY" id="1mp-Z0-3bq"/>
+                            <constraint firstAttribute="trailing" secondItem="Xvo-Ue-iEW" secondAttribute="trailing" constant="10" id="avb-As-h8F"/>
+                            <constraint firstItem="Xvo-Ue-iEW" firstAttribute="leading" secondItem="Md5-ZL-dWq" secondAttribute="leading" constant="10" id="xWQ-kd-7oM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="autherNameLabel" destination="sxf-jv-kPF" id="pb6-m6-Mvf"/>
+                        <outlet property="dateCreatedLabel" destination="bn7-ge-fTb" id="Ps6-gS-v3W"/>
+                        <outlet property="descriptionLabel" destination="kaA-rL-OVH" id="RUa-pa-XiJ"/>
+                        <outlet property="titleLabel" destination="zir-Dj-0v7" id="hVa-CM-jzE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5f-xa-eOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,6 +166,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <namedColor name="ThemeColor">
             <color red="0.4779999852180481" green="0.88099998235702515" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
