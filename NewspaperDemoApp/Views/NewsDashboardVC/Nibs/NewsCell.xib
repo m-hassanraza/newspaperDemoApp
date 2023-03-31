@@ -98,7 +98,7 @@
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="calendar.badge.clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LTc-19-zTS">
                                                 <rect key="frame" x="108.33333333333334" y="1.6666666666666661" width="353.33333333333331" height="19"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="2022-11-01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7L-3t-oxA">
                                                 <rect key="frame" x="470.33333333333326" y="0.0" width="74.333333333333371" height="20.333333333333332"/>

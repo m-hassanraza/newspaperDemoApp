@@ -30,6 +30,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iIP-vW-dpb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="0p0-4N-1h6" secondAttribute="bottom" id="Rwj-qZ-UJ3"/>
                             <constraint firstItem="0p0-4N-1h6" firstAttribute="leading" secondItem="iIP-vW-dpb" secondAttribute="leading" id="ZeT-cA-vcr"/>
@@ -125,7 +126,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="calendar.badge.clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FA2-i5-9ha">
                                                 <rect key="frame" x="0.0" y="1.6666666666666661" width="22.333333333333332" height="19"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-11-01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn7-ge-fTb">
                                                 <rect key="frame" x="31" y="0.0" width="339" height="20.333333333333332"/>
@@ -207,6 +208,9 @@
         <namedColor name="ThemeColor">
             <color red="0.4779999852180481" green="0.88099998235702515" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
