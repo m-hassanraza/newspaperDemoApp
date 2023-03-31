@@ -23,7 +23,7 @@ class CustomHud: NSObject {
         return sceneDelegate
     }
     
-    var rootController:UIViewController? {
+    var rootController: UIViewController? {
         guard let viewController = appDelegate.window?.rootViewController else {
             fatalError("There is no root controller")
         }
