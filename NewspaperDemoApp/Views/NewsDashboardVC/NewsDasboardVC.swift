@@ -22,9 +22,9 @@ class NewsDasboardVC: UIViewController {
         self.setupViewModel()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         newsCollectionView.collectionViewLayout.invalidateLayout()
+        
     }
     
     func setupCollectionView() {

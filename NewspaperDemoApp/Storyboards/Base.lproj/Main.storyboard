@@ -30,7 +30,6 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iIP-vW-dpb"/>
-                        <color key="backgroundColor" name="ThemeColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="0p0-4N-1h6" secondAttribute="bottom" id="Rwj-qZ-UJ3"/>
                             <constraint firstItem="0p0-4N-1h6" firstAttribute="leading" secondItem="iIP-vW-dpb" secondAttribute="leading" id="ZeT-cA-vcr"/>
@@ -177,6 +176,12 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="ThemeColor"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
                             <color key="backgroundColor" name="ThemeColor"/>
                             <textAttributes key="titleTextAttributes">
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
