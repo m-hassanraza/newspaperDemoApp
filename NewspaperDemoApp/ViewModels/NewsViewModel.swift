@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol NewsViewModelDelegate: AnyObject {
     func reloadCollectionView()
@@ -32,7 +33,7 @@ class NewsViewModel {
         newsCellModel?.count ?? 0
     }
     
-    let minimumLineSpacingForSectionAt: CGFloat = 25
+    let minimumLineSpacingForSectionAt: CGFloat = 30
     
     // MARK: - Constructor : Dependency Injection
     init(newsApiService: NewsAPIService = NewsApi()) {
@@ -77,7 +78,10 @@ extension NewsViewModel {
     // Calculate cell size for specified frame size
     func getNewsCellSize(for size: CGSize) -> CGSize {
         let width = size.width - 20
-        let height = width / 4.5
+        var height = width / 4.5
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            height = width / 7
+        }
         return CGSize(width: width, height: height)
     }
 }

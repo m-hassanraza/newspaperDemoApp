@@ -24,6 +24,7 @@ class NewsDasboardVC: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         newsCollectionView.collectionViewLayout.invalidateLayout()
+        newsCollectionView.reloadData()
         
     }
     

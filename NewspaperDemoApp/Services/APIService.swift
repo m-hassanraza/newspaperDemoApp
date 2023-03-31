@@ -16,7 +16,7 @@ class NewsApi: NewsAPIService {
     func fetchAll(callback: @escaping GetNewsCallback) {
         
         // API URL
-        guard let url = URL(string: "https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=iST0gGJJo4igqUucP0q4lsEaOjMzjP7Z") else { return }
+        guard let url = URL(string: Constants.baseUrl + Constants.mostPopularArticals + Constants.apiKey) else { return }
         
         // Variables
         var news: [NewsResultModel] = []
